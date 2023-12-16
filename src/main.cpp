@@ -82,7 +82,11 @@ void loop() {
         M5.Lcd.println("Invalid sample detected, skipping.");
     } else {
         M5.Lcd.setCursor(0, 40);
-        M5.Lcd.printf("Co2:%d\n", co2);
+        //M5.Lcd.printf("Co2:%d\n", co2);
+        M5.Lcd.printf("Co2:%d", co2);
+        M5.Lcd.println("     "); //remove leftover characters if the next reading has less characters-OSKY
+        Serial.print("Co2:");
+        Serial.println(co2);
         M5.Lcd.printf("Temperature:%f\n", temperature);
         M5.Lcd.printf("Humidity:%f\n", humidity);
     }
