@@ -25,7 +25,7 @@
 SensirionI2CScd4x scd4x;
 
 void setup() {
-    M5.begin();
+    M5.begin(true,true,true,true);
     M5.Lcd.setTextFont(4);
     M5.Lcd.drawString("Unit CO2", 110, 0);
     uint16_t error;
