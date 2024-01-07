@@ -86,7 +86,11 @@ void loop() {
         M5.Lcd.printf("Co2:%d", co2);
         M5.Lcd.println("     "); //remove leftover characters if the next reading has less characters-OSKY
         Serial.print("Co2:");
-        Serial.println(co2);
+        Serial.print(co2);
+        Serial.print(";Temp:");
+        Serial.print(temperature);
+        Serial.print(";RH:");
+        Serial.println(humidity);
         M5.Lcd.printf("Temperature:%f\n", temperature);
         M5.Lcd.printf("Humidity:%f\n", humidity);
     }
